@@ -1,0 +1,40 @@
+empty_cart_msg Your cart is currently empty
+search_nothing No results for
+
+search_autocomplete_ret Shoes
+
+filter_category category
+filter_category_name Apparel
+filter_brand_name Converse
+filter_color_name Black
+filter_size_name 8.5
+
+%main !marked:'action_bar_root' && !marked:'toolbar_tabs' && !marked:'activity_stores_pager'
+%search !marked:'search_src_text' && not !marked:'activity_search_pager'
+%register !marked:'Create A Free Account'
+
+@signin.signup !marked:'Join Now'
+@back !id:'fragment_login_close_button'
+@cart.item_count !id:'reservation_quantity_spinner_frame'
+@detail.cart !id:'toolbar_cart_badge_icon'
+@checkout.subtotal !id:'view_payment_subtotal'
+
+config.REMOVE_BOTSLIDE_BACKGROUND false
+
+%menu drawer_layout && view_account_customer_support_app_feedback_button
+@addredit.addr_last credit_card_last_name
+
+%addredit Checkout && Street Address
+
+@main.menu Navigate Up
+
+%searchret filter_button && product_list
+@sort.sort_review notexist
+@searchret.item_rating notexist
+
+@register.signin Login
+@menu.terms Terms Of Service
+
+%app_gilt_select Please select a size
+
+@addredit.addr_line1 address_address1

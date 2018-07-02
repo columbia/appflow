@@ -1,0 +1,59 @@
+empty_cart_msg Your Cart is empty
+search_nothing No Results Found
+
+@item_count_1 !marked:'QTY 1'
+@item_count_2 !marked:'QTY 2'
+@item_count_remove !marked:'Remove'
+
+%app_groupon_intro !id:'cities_slide_id'
+
+@welcome.skip !marked:'Just show me the deals'
+@welcome.existing !marked:'done'
+
+%menu !marked:'My Groupons' && !marked:'Customer Support'
+
+@signin.signup !marked:'New User'
+
+%register !marked:'Existing User' && !marked:'New User' && !id:'fragment_log_in_sign_up_name'
+@register.signin !marked:'Existing User'
+@signin.email !id:'fragment_log_in_sign_up_email'
+@signin.login !id:'fragment_log_in_sign_up_groupon_button'
+
+@search.search_input !id:'search_edittext'
+
+%searchret !id:'global_search_results_section' && not !id:'single_filter_options_list' && not !id:'filter_sheet_container'
+@searchret.item_price !id:'deal_card_new_price'
+@searchret.sort !textcontains:'Sort'
+@searchret.search_keyword !id:'post_search_term'
+@searchret.filter !textcontains:'^ALL FILTERS'
+
+%app_groupon_option !marked:'Select Option' && !id:'option_image'
+
+%sort !marked:'Price: Low to High' && !marked:'Relevance'
+%filter !id:'filter_sheet_container'
+@apply !id:'done_button'
+
+filter_brand_name Logitech
+filter_price_name $0 - $10
+filter_category Category
+filter_category_name Computer Accessories
+
+%cart !marked:'Your Cart' && !id:'cart_layout'
+
+%main !marked:'FEATURED' && !marked:'GOODS' && !marked:'Search Groupon'
+
+@cart_count !id:'shopping_cart_counter'
+
+@menu.home !marked:'Browse Deals'
+
+config.REMOVE_BOTSLIDE_BACKGROUND true
+
+@register.email fragment_log_in_sign_up_email
+
+@menu.notifications Notification Settings
+%about Build Version
+
+@payment.card_new add_credit_card_button
+%addredit Add Shipping Address && Shipping Address && Save
+
+dialog_positive_button Dismiss

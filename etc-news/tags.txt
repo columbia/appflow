@@ -1,0 +1,16 @@
+universal menu*, back*, ctxmenu*
+list item, item_title, item_image, cat_item, search*, searchbox*
+menu signin*, search*, setting*, bookmark*, home*, logout*
+bookmark item, item_remove, item_menu, empty*
+welcome existing*, newuser*, skip*
+signin email*, password*, login*, signup*, signin_forgot*
+register email*, password*, register*, signin*
+detail title, image, text, share*, bookmark*, ctxmenu*
+ctxmenu setting*, textsize*, signin*
+textsize smaller*, larger*
+setting smaller*, larger*
+intro skip*
+searchret item, item_title, item_image, item_time, keyword*, search_nothing*
+search search_input*, search_clear*
+remove_screens cat2, shipping, notification, cart, comment, feedback, share
+ignored_screens none

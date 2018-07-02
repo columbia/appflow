@@ -1,0 +1,51 @@
+search_nothing We were unable to find
+search_query cat
+
+empty_cart_msg Your cart is empty
+
+filter_category Category
+filter_category_name Accessories
+filter_color_name black
+filter_price_name $0 to $25
+filter_size_name XL
+
+%menu !id:'left_drawer' && !marked:'STORES'
+%account !marked:'ADDRESSES' && !marked:'PAYMENT CARDS' && !marked:'SIGN OUT'
+%searchret !id:'search' && !id:'list' && !id:'sort_button' && !id:'filter_button'
+%filter !id:'refinements_list' && not !marked:'Sort Mode'
+
+@cart_subtotal !id:'products_total'
+@search_keyword !id:'search'
+
+@checkout.subtotal !marked:'Subtotal'
+@checkout.tax !marked:'Est. Sales Tax'
+@checkout.totalcost !marked:'Order Total'
+@menu.cat !marked:'SHOP'
+
+dialog_positive_button credit
+
+@cart_count !id:'actionbar_cart_text'
+
+@filter.filter_reset notexist
+
+%cardedit Card Details
+@cardedit.card_save select_button
+@addredit.addr_save select_button
+
+dialog_positive_button select
+#@address_item shipping_icon
+
+#@menu.faq FAQs
+#%contact Here's when you can reach us!
+
+%register First Name && Last Name && not Shipping Address
+%search search_src_text && scanButton && listButton && not SORT && not REFINE
+
+@account.addresses !ImageView+no:'4'
+@account.payments !ImageView+no:'5'
+
+%app_intro Credit Card && native_login
+@pass_intro native_login
+
+@address.address_item address
+@checkout.shipping_cost shipping_total

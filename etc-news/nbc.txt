@@ -1,0 +1,23 @@
+@list.item_image itemview_icon
+@bookmark.empty empty
+@detail.image !DIV+id:'title'
+
+%textsize minLabel && maxLabel
+#@textsize.smaller minLabel
+#@textsize.larger maxLabel
+#@textsize.apply !back
+
+@menu.setting Notifications
+
+%searchret content_container && itemview_text && not Search NBC NEWS && not tabBar && not search_cancel_button && not Saved
+#@searchret.item_title itemview_text
+@searchret.item_image itemview_icon
+@searchret.keyword title
+
+@search_nothing empty
+
+%search Search NBC NEWS
+# NEW
+@ctxmenu.setting Notifications Settings
+%detail videoBar && videoContainer && video_view
+@menu.bookmark Saved

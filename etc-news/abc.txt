@@ -1,0 +1,19 @@
+%app_intro Learn More
+@pass_intro Learn More
+
+%searchret search_results_listview
+
+@menu.bookmark Saved
+
+%bookmark saved_articles_recycler_view
+
+@item_menu base_article_list_item_kebab_menu_button
+@item_remove !id:'base_article_list_item_kebab_menu_button'+-50+50
+
+@searchret.item_image notexist
+
+@setting.textsize Font Size for Stories
+
+# NEW
+%detail story_root && title && menu_share_button
+@bookmark.item base_article_list_item_container

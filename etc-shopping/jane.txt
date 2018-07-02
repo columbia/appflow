@@ -1,0 +1,59 @@
+search_nothing 0 results
+empty_cart_msg Your shopping bag is empty
+@remove_dialog_yes !marked:'YES'
+
+%app_intro !id:'onboarding_skip'
+@pass_intro !id:'onboarding_skip'
+
+%welcome !id:'onboarding_jane_desc'
+@welcome.existing !marked:'Log in here'
+
+%main !marked:'DEALS' && !marked:'SNEAK PEEKS'
+@main.search !id:'deals_menu_search_item_tv'
+
+%search !id:'search_edittext' && not !id:'search_refresh_layout'
+
+%searchret !id:'search_refresh_layout'
+
+@detail.detail_image !id:'deal_detail_image_slideshow_rl'
+
+%app_jane_option !id:'trait_item_option_ll' && !marked:'BUY NOW' && not !id:'trait_item_option_tv'
+#%detail !id:'deal_detail_page_jsv'
+
+%app_jane_continue !marked:'CHECKOUT' && !marked:'CONTINUE SHOPPING'
+
+@cart !id:'navigation_cart_view'
+
+@cart.item_count !id:'layout_cart_option_amount_tv'
+@cart_count !id:'navigation_cart_count_tv'
+@cart.item_remove !id:'layout_cart_option_remove_btn'
+
+@menu !id:'navigation_settings_view'
+
+%menu !id:'content' && SETTINGS && settings_version_info
+
+#%checkout !id:'secure_checkout'
+
+@checkout.shippingcost !marked:'SHIPPING'
+@checkout.subtotal !marked:'ORDER SUBTOTAL'
+@checkout.addresses !marked:'address_view'
+#@checkout.payments !marked:'Select Payment Method'
+%payment !marked:'Add Credit Card' && !marked:'PAYMENT METHODS'
+
+%register !id:'signup_scrollview'
+
+@searchret.item_title !id:'deal_detail_title_tv'
+
+@menu.logout Log Out
+
+%app_jane_logout_confirm !textcontains:'Are you sure you want to' && LOG OUT
+
+@address.address_new New Shipping Address
+%addredit NEW ADDRESS && SAVE
+
+addr_state New York (NY)
+
+@payment.card_new Add Credit Card
+
+%app_message2 jane_dialog_content_tv && OK
+@app_message_continue OK

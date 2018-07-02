@@ -1,0 +1,43 @@
+search_nothing No Listings
+
+@signin !id:'signInButton'
+
+#search_query cat
+search_autocomplete_query fan
+search_autocomplete_ret fancy
+
+%search !id:'searchTextView' && !id:'tabs'
+%searchret !id:'searchResultsListView' && not !id:'tabs'
+
+@searchret.item_image !id:'covershotView'
+@searchret.filter !marked:'Filter'
+
+filter_category Category
+filter_category_name Other
+filter_brand_name kate spade
+filter_price_name Under $25
+filter_size_name One Size
+
+%filter !id:'sizeRowLayout' && !id:'nextButton'
+@detail_title !id:'titleView'
+%detail !id:'actionbar_listing_details'
+
+@searchret_item !id:'listingItemLeft'
+
+@payment.card_new Add Credit Card
+@address.address_item suggested_address
+
+%addredit Name && Street && Street2 && City && State
+@addredit.addr_name user_address_form_name
+@addredit.addr_save Submit
+
+%welcome fbLoginButton && emailSignupButton && signInButton
+
+@account.addresses My Address
+@detail.cart notexist
+@sort.sort_recent Just In
+@sort.sort_popular notexist
+@search.search_clear clearSearchTextImage
+@welcome.existing signInButton
+
+config.NOTFOUND_SCROLLDOWN_LIMIT 4

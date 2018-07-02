@@ -1,0 +1,15 @@
+%list logo
+%menu More Topics
+
+@setting.textsize Text size
+
+#%textsize Small && Normal && Large && Huge
+
+@detail.title !View+no:'1'
+@detail.text !View+no:'4'
+
+#@list.ctxmenu More options
+
+@search_nothing !textcontains:'Sorry, there are no'
+%searchret Back && search && search_cancel
+@search_clear search_cancel

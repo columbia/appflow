@@ -1,0 +1,51 @@
+empty_cart_msg Your cart is empty
+search_nothing No products found
+#@remove_dialog_yes !marked:'Remove item'
+@remove_dialog_yes !marked:'YES'
+
+%app_message !marked:'Oops!'
+@app_message_accept !TextView+marked:'OK'
+
+@main.cart !id:'action_bar_item_icon'
+@detail.cart !id:'action_bar_item_icon'
+
+@home !marked:'Browse'
+
+%account !marked:'profile_fragment_header_image_container'
+%setting !marked:'Privacy Policy' && not !marked:'Frequently Asked Questions'
+
+@searchret_item !id:'product_feed_tile_product_view'
+@searchret.item_image !id:'product_feed_image'
+@item_price !id:'product_feed_price_main_text'
+@search_keyword !class:'TextView'
+@cart.item_image !id:'cart_fragment_cart_items_item_row_image'
+@cart.item_remove !id:'cart_fragment_cart_items_item_row_edit_button'
+
+@detail_addcart !marked:'product_details_fragment_add_to_cart_button'
+
+%app_wish_option !marked:'add_to_cart_dialog_fragment_title'
+
+@cart_count !id:'action_bar_item_badge'
+
+config.WAITIDLE_MAXTRY 5
+
+%main !textcontains:'Hourly Deal' && !marked:'Filter' && !marked:'Search'
+
+%wish_temporary Thank You && !textcontains:'Item Added to Cart'
+
+%addredit shipping_address_form_full_name_text && not cart_fragment_payment_form_credit_card_security_hint
+@addredit.addr_save Done
+
+%cardedit cart_fragment_payment_form_credit_card_security_hint
+
+%app_message2 !textcontains:'You unlocked' && Continue
+@app_message_continue Continue
+
+%notif Notifications && Full view && notifications_fragment_view_page
+@menu.setting Settings
+%orders empty-view && empty-message && Order History
+
+%app_wait base_dialog_content && loading_dialog_fragment_progress
+
+@cart.cart_subtotal Item Total
+@cardedit.card_save Done

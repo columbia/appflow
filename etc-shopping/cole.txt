@@ -1,0 +1,38 @@
+empty_cart_msg Your cart is empty
+
+%menu !id:'drawer_scroll' && !marked:'Women'
+%search !id:'search' && not !id:'list'
+
+@signin !text:'Log In'
+@search_keyword !id:'search_src_text'
+@search_clear !id:'search_close_btn'
+@item_image !ImageView+id:'image'
+
+search_query shoes
+menu_signin Log In
+
+filter_category Category
+filter_category_name womens
+filter_size_name 10.5
+filter_color_name Acorn
+
+@filter.apply !id:'okay_button'
+
+@cart_count !id:'actionbar_cart_text'
+%account !id:'layout_container' && !id:'layout_cell_layout' && !id:'layoutArea'
+
+%main !id:'action_search' && !id:'layoutArea' && !id:'decor_content_parent' && !marked:'Cole Haan'
+
+dialog_positive_button credit
+
+
+@filter.filter_reset notexist
+
+@account.payments !ImageView+no:'10'
+@account.addresses !ImageView+no:'4'
+@addredit.addr_save select_button
+@address.address_item !id:'address'
+@checkout.payments payment_option_clickable_area
+
+@menu.logout Log Out
+%welcome sign_in && sign_up && not email

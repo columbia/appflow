@@ -1,0 +1,21 @@
+filter_category Select a category
+filter_category_name Cars
+
+%app_5miles_contactprompt !marked:'skip' && !marked:'search for contacts'
+%app_5miles_followusers !marked:'Follow All' && !marked:'Sellers Nearby'
+
+@main.searchbox !id:'home_toolbar_search'
+
+%search !id:'keyword_search_pager'
+%searchret !id:'search_result_list'
+
+@welcome.google btn_google_login
+
+@searchret.item_title home_item_title
+@searchret.filter filter
+@searchret.search_keyword search_edit
+@welcome.signup sign_up
+
+@sort_pricelow Lowest Price
+@sort_pricehigh Highest Price
+@sort_recent Most Recent

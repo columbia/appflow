@@ -1,0 +1,40 @@
+empty_cart_msg Your bag is empty
+
+filter_size_name M
+filter_color color
+filter_color_name grey
+filter_brand_name Boohoo
+filter_price_name $0 - $20
+
+
+%app_boohoo_country SELECT COUNTRY && UNITED STATES
+
+%searchret !id:'product_activity_recycler_products'
+@searchret.item_rating !id:'this_does_not_exist'
+
+#@filter.apply !id:'activity_filter_set'
+#@filter.filter_reset !id:'action_clear_filter'
+
+dialog_positive_button all
+
+%app_boohoo_option !marked:'Select' && !marked:'ADD TO BAG' && SIZE
+
+#@cart.item_count !id:'quantity'
+
+%main !id:'fragment_home_banners_grid'
+#@cart_count !id:'actionbar_bag_count_text'
+
+%menu !id:'left_drawer'
+
+%account TRACK MY ORDER && DELIVERY && CUSTOMER SERVICE
+
+%app_boohoo_preship Enter a Shipping Address && Shipping && !textcontains:'^Country'
+
+%shipping SELECT A SHIPPING OPTION
+
+@cardedit.card_save COMPLETE ORDER
+
+@shipping.continue CONTINUE TO PAYMENT
+
+@cart.item_remove trashAction2
+@addredit.addr_line1 address1EditText

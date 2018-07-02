@@ -1,0 +1,88 @@
+# TODO: remove this
+search_nothing did not match any products
+empty_cart_msg Your Shopping Cart is empty
+
+search_query mousepad
+
+filter_brand_name Belkin
+
+%welcome !marked:'sign_in_button' && !marked:'new_user' && !marked:'skip_sign_in_button'
+%main !marked:'action_bar_cart_image' && !marked:'search_edit_text' && !marked:'action_bar_burger'
+%amazon_promotion !marked:'Not interested' && !marked:'Sure, why not'
+%menu !id:'gno_drawer_list'
+
+@skip !marked:'skip_sign_in_button'
+@welcome.existing sign_in_button
+#@register.signin !id:'auth-already-have-account'
+@register.signin Already a customer?
+@menu.signin !text:'Hello. Sign In'
+@cat !text:'Shop by Department'
+@detail_addcart !id:'add-to-cart-button'
+@item_remove !textcontains:'Delete'
+@checkout !textcontains:'Proceed to checkout'
+@cart.item_count !class:'Spinner'
+@cart.item_image !id:'sc-product-image'
+@cart.cart_subtotal !textcontains:'Cart subtotal'
+
+%detail !id:'add-to-cart-button'
+%detail productTitleExpanderColumn && price-large && image-wrapper && action_bar_cart
+@detail.detail_image image-wrapper
+
+# serious hack
+@apply !back
+
+%filter !id:'refinements_menu_list_view' && not !marked:'Newest Arrivals'
+%filter !id:'refinements_menu_list_view' && not !marked:'Relevance'
+
+@cart_count !id:'action_bar_cart_count'
+
+#@menu.account !marked:'Your Account'
+@filter.sort !marked:'Sort'
+%search !id:'rs_search_suggestion_list_view'
+
+config.WAITIDLE_MAXTRY 200
+
+@search_clear !id:'rs_search_plate'+95+50
+
+@sort.sort_review !marked:'Avg. Customer Review'
+
+@item_count_1 !Link+marked:'1'
+@item_count_2 !Link+marked:'2'
+
+%checkout !id:'checkoutDisplayPage' && not !marked:'Select a shipping address' && not !marked:'Select a payment method' && not Enter a shipping address
+@checkout.totalcost !id:'a-color-price'
+@checkout.subtotal !marked:'Items:'
+@checkout.addresses purchase-shipping-address
+@checkout.payments Payment method
+
+#@menu.contact Customer Service
+#@menu.giftcard Gift Cards & Registry
+@menu.logout !textcontains:'Sign out'
+
+@account.addresses Manage address book
+@account.payments Manage payment options
+@address.address_item address-ui-widgets-FullName
+@address.address_delete Delete
+
+@addredit.addr_line1 !EditText+no:'2'
+@addredit.addr_state address-ui-widgets-enterAddressState
+@addredit.addr_save Add address
+
+%addredit Add a new address && Use Contacts && Add address
+
+@payment.card_new Add a payment method
+
+@cardedit.card_name !EditText+no:'1'
+
+#@main.menu action_bar_burger
+@signin.email ap_email_login
+@sort.sort_pricelow Price: Low to High
+@sort.sort_recent Newest Arrivals
+
+%amazon_signin ap_email_login && Continue && not ap_password
+
+%cart Shopping Cart && sc-cart-header
+%account Your Account && Orders && Your orders
+config.allow_restart true
+
+%payment Your Amazon Wallet && Manage Payment Options && Add a payment method

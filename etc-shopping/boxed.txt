@@ -1,0 +1,14 @@
+%app_boxed_zipcode !id:'zipCode' && !id:'confirm_action'
+%register !id:'password_confirm_layout'
+%main appbar && toolbar && Search && Cart && featuredview && drawer && Featured && Shop && News
+
+search_nothing No Results Found
+empty_cart_msg Your Cart is Empty
+
+@menu.orders Your Orders
+@searchret.searchret_item !class:'RelativeLayout'
+@detail.detail_title info_layout
+
+search_query cat
+
+%payment Add A New Card && Credit Card

@@ -1,0 +1,43 @@
+newusername iamverynew@gmail.com
+
+%app_dailyhunt_language onboarding_continue && onboarding_edition_choose_title
+
+%menu news_drawer && hamburger_my_favourites
+
+%signin tv_title_sign_in && Please enter your email address && not Your Password && not Set a password
+#@signin.email edit_email
+
+%dailyhunt_signin_password tv_title_sign_in && Your Password
+@dailyhunt_signin_password.back iv_navigation
+@dailyhunt_signin_password.login button_continue
+@dailyhunt_signin_password.password edit_password
+@dailyhunt_signin_password.signin_forgot text_forgot_password
+
+%dailyhunt_signon_password tv_title_sign_in && Set a password
+@dailyhunt_signon_password.back iv_navigation
+@dailyhunt_signon_password.password edit_password
+
+%app_intro Sign in with email
+@pass_intro Sign in with email
+
+%app_intro2 swipe_text
+@pass_intro2 swipe_text
+
+%app_intro3 Saved Articles && Newspapers
+@pass_intro3 Saved Articles
+
+@detail.title news_details_news_title
+
+@detail.bookmark download_articles_button_layout
+@detail.share nh_share_view
+
+@menu.bookmark My Favorites
+
+@bookmark.empty error_msg
+
+#@search.search_clear search_close_btn
+@search_nothing !textcontains:'Sorry. We could not find books'
+
+%searchret SEARCH RESULTS && toolbar_book_search
+
+@searchret.keyword custom_toolbar_title

@@ -1,0 +1,22 @@
+%app_intro btn_get_started
+@pass_intro btn_get_started
+
+%searchret vibe_search_recycler_view && not Search vibes && not What's important to you?
+
+@search_nothing vibe_collection_error_view
+
+@searchret.item_title vibe_view_title
+
+@detail.ctxmenu post_options_icon
+
+%ctxmenu select_dialog_listview && Looks like spam
+
+@register.signin js-link-feedback
+@register.password notexist
+@signin.signin_forgot mbr-forgot-link
+
+%yahoo_channel vibe_view_member_count && vibe_view_title && vibe_view_join_button
+
+#%search search_bar_text && Search vibes && Explore
+
+@list.cat_item notexist

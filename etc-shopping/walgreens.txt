@@ -1,0 +1,40 @@
+empty_cart_msg Your Cart is empty
+search_nothing We couldn't find what you're looking
+search_query toothbrush
+addr_state NY - New York
+
+%app_walgreens_intro !textcontains:'Here's a quick intro' && !marked:'left_circular_txview'
+%walgreens_menu !textcontains:'Prescriptions & Health' && !textcontains:'Shop Products'
+%main !marked:'shop_actionbar_bar_container' && !marked:'shop_scan_icon' && !marked:'btn_product_orders' && not !id:'overlay_layout' && not !class:'WebView'
+
+@searchret.sort !marked:'REFINE'
+@sort.sort_review !marked:'Highest Rated'
+
+%search !id:'serarch_autocomplete_tv' && !id:'overlay_layout'
+
+@searchret.item_rating !marked:'shp_product_rating'
+@searchret.search_keyword !id:'search_layout'
+
+%cart !id:'shop_webview_contatiner' && !class:'WebView'
+
+%app_walgreens_keepshopping !marked:'KEEP SHOPPING' && !marked:'VIEW CART'
+
+@signin.signup !id:'txtsignup'
+
+@detail.cart !id:'shop_cart_icon'
+
+%searchret shop_products_list_container
+
+%app_walgreens_preaccount Edit Personal Information && minimized
+
+@address.address_item addressbookContent
+@address.address_new add-address
+@addredit.addr_last addressform-lastname
+@addredit.addr_line1 addressform-street
+%addredit Address Book && addressform-save
+@address.address_delete !textcontains:'Delete'
+
+%payment Payment Information && payinfo-edit
+@payment.card_new payinfo-edit
+%cardedit payinfo-save
+@cardedit.card_save payinfo-save

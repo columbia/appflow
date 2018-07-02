@@ -1,0 +1,17 @@
+%app_intro on_boarding_pager && next
+@pass_intro next
+
+%welcome GET STARTED
+
+%list nav_icon && not on_boarding_paper
+@list.menu nav_icon
+
+@menu.setting settings_icon
+@menu.bookmark fave_icon
+
+@bookmark.empty No Saved Articles
+
+@bookmark.item section_title_wrapper
+
+%app_usatoday_allsetting General && Help && About && Notifications
+@setting.textsize Article Text Size

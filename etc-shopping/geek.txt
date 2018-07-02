@@ -1,0 +1,26 @@
+empty_cart_msg Your cart is empty
+search_nothing No products found
+@remove_dialog_yes !marked:'YES'
+
+search_autocomplete_ret foot
+
+#@detail_title !id:'product_details_fragment_overview_title'
+%setting !marked:'Settings' && !marked:'Rate App' && !marked:'Emails'
+
+@detail_addcart !marked:'product_details_fragment_add_to_cart_button'
+%app_geek_option !marked:'add_to_cart_dialog_fragment_title'
+
+@searchret.item_image !id:'product_feed_image'
+
+@home !marked:'Browse'
+%account !marked:'profile_fragment_header_image_container'
+
+%app_message !marked:'Oops!'
+@app_message_accept !TextView+marked:'OK'
+
+config.WAITIDLE_MAXTRY 5
+
+%welcome login_fragment_create_account_button && login_fragment_sign_in_button
+
+@detail.share Share
+@menu.account menu_profile_name

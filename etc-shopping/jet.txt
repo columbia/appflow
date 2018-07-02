@@ -1,0 +1,47 @@
+search_nothing did not match any products
+empty_cart_msg Your cart is empty
+
+invalid_search_query asdfasdfasdfasdf
+
+filter_brand Brand
+filter_brand_name HP
+filter_category ^Category$
+filter_category_name Electronics
+filter_color Color
+filter_color_name White
+filter_price Price
+filter_price_name $0 - $25
+#filter_size Style
+#filter_size_name Mini
+
+%app_jet_extrasaving !marked:'show extra savings' && !textcontains:'Get extra savings'
+%app_jet_cartpreview !textcontains:'Cart Preview'
+%app_jet_filterhide !id:'fab_filter' && not !id:'filter_container'
+
+%signin !marked:'FORGOT PASSWORD?'
+
+%searchret !marked:'search_results'
+@cart_subtotal !id:'subtotal'
+
+@subtotal !id:'subtotal'
+@shippingcost !id:'shipping_fee'
+@tax !id:'tax'
+@totalcost !id:'order_total'
+
+@item_image !id:'row_image'
+
+%main !id:'icon_search_container' && !id:'icon_cart_container' && !marked:'shop by category' && !id:'recycler_view'
+
+@addredit.addr_first form_address_first_name_layout
+@address.address_item address_outer_layout
+@address_edit Edit
+
+@menu.signin Sign In/Create Account
+
+%filter Filters && button_done
+@sort.sort_recent notexist
+@menu.terms Terms of Use
+
+@searchret.item_title row_title
+@register.signin Login
+

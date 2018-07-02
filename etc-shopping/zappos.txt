@@ -1,0 +1,47 @@
+empty_cart_msg No items in Cart
+search_nothing No results were found
+
+@item_count_1 !marked:'1 item'
+@item_count_2 !marked:'2 items'
+
+filter_color_name Pink
+filter_brand_name Josmo Kids
+filter_price_name $50.00 and Under
+filter_size_name 10 Toddler
+
+@filter_dialog_yes !marked:'APPLY FILTERS'
+@filter.apply !marked:'APPLY FILTERS'+110+50
+
+@menu !marked:'More Options'
+%menu !marked:'My Account' && !marked:'My Lists'
+
+@cart.item_remove !marked:'menu_remove_all'
+@cart.item_count !id:'cart_list_item_quantity'
+%search !marked:'search_plate'
+
+@menu.cart !marked:'Bag'
+@menu.setting !marked:'Settings & Info'
+%setting !marked:'Settings & Info'
+
+@sort.sort_popular !marked:'Most Popular'
+@searchret.item_image !id:'product_image'
+@searchret.item_rating !id:'product_rating'
+
+%app_zappos_choosecat !marked:'Product Type'
+%app_zappos_option !marked:'Select a size'
+%filter !marked:'Brand' && not !marked:'Product Type' && !marked:'Price'
+
+%main !id:'home_departments_cards'
+
+search_autocomplete_ret Footwear
+
+dialog_positive leave
+
+@addredit.addr_state add_update_shipping_address_address_state_spinner
+%addredit New Shipping Address && SHIPPING INFORMATION
+%address Shipping Addresses && generic_add_to_fab
+%payment Payment Methods && generic_add_to_fab
+
+@address.address_item address_label
+@searchret.filter menu_filter
+@searchret.search_keyword title

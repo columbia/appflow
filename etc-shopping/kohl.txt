@@ -1,0 +1,51 @@
+empty_cart_msg You have no items
+search_nothing We couldn't find
+
+filter_brand_name American Tourister
+filter_category Department
+filter_category_name Clothing
+filter_size_name Regular
+filter_price_name Under $10
+
+%search !id:'id_search_sugesstionList'
+
+@search.search_clear !marked:'Cancel'
+
+%searchret !id:'id_productMatirx_header_filters'
+@searchret.filter !id:'id_productMatirx_header_filters'
+@searchret.search_keyword !id:'id_productMatirx_header_category'
+@searchret.item_price !id:'id_product_itemOriginalPriceTxt'
+
+%app_kohl_love !marked:'Do you love Kohl's?' && !marked:'NO'
+@detail.cart !id:'id_actionBar_mainAction'
+
+@cart.item_image !id:'img-responsive'
+
+@filter_dialog_yes !marked:'APPLY'
+@filter.filter_reset !marked:'CLEAR ALL'
+
+@back !marked:'id_actionBar_list_icon'
+
+%account !marked:'My Information' && !marked:'Account'
+
+
+config.WAITIDLE_MAXTRY 100
+
+%app_intro id_checkout && Item Added to Cart
+@pass_intro id_checkout
+
+@main.menu id_actionBar_list_icon_layout
+
+%checkout SHIPPING ADDRESS && 1. Delivery && Kohls && SHIPPING TO
+
+@menu.orders Order Status
+@menu.contact Help/Contact Us
+
+%cat Home && Women && Men && Beauty && Swim && Clearance
+
+%orders Your Orders && Keep Shopping
+
+@detail.detail_addcart ADD TO BAG
+@cart.checkout CHECKOUT
+
+%app_wait ProgressBar

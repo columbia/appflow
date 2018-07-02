@@ -1,0 +1,54 @@
+empty_cart_msg Your Cart is empty
+search_nothing We couldn't find any matches
+@remove_dialog_yes !marked:'REMOVE'
+
+filter_category Category
+filter_category_name Mice
+filter_brand_name Razer
+filter_price_name $25 - $49.99
+filter_size Battery Size
+filter_size_name AAA
+
+@main.menu !marked:'MORE'
+
+#@signin.signup !marked:'Create Account'
+@register.signin !marked:'Sign in'+90+50
+
+%searchret !marked:'All Products' && !marked:'Select a Store'
+@searchret.item_rating !id:'stars'
+
+%filter !id:'facetsExpandableList' && !marked:'CLEAR ALL'
+@filter.sort !id:'sort'
+
+@cart_count !id:'countBadge'
+
+@signin.password !id:'fld-p1'
+
+@cart.item_image !id:'imageView'
+@cart.item_remove !id:'minus_button'
+
+@signin.signin_fb Facebook
+
+%app_message2 Continue to Cart
+@app_message_continue Continue to Cart
+
+@menu.main Home
+
+@menu.account userName
+
+config.NOTFOUND_SCROLLDOWN_LIMIT 7
+
+%menu headerName && signOut && userName && Rewards
+%cardedit Account Home && Menu && Credit Card Information
+%account Account Home && Menu && Recent Order Activity
+@account.addresses Manage Your Shipping Addresses
+
+%app_wait !ProgressBar+no:'1'
+
+cart_count_value 2
+
+%payment Profile && Credit Cards && Add a Credit Card && Apply Now
+@addredit.addr_state !id:'state'
+@addredit.addr_name notexist
+
+addr_state NY - New York

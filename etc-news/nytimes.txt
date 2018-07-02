@@ -1,0 +1,21 @@
+@textsize.apply !back
+
+@ctxmenu.signin !marked:'Log In or Create Account'
+
+%app_intro accountLink
+@pass_intro accountLink
+%app_intro2 loginLink
+@pass_intro2 loginLink
+
+@signin.signup Create One
+#@signin.login loginButton
+
+@menu.bookmark Saved for Later
+
+#@bookmark.empty save_empty_desc
+
+@menu.search drawer_search_field
+
+#%signup passwordConfirmInput
+%searchret search_list
+@search_nothing no_results_verbiage

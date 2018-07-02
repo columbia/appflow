@@ -1,0 +1,44 @@
+search_nothing No search results
+empty_cart_msg Your shopping basket is empty
+
+filter_category Category
+filter_category_name Keyboards
+filter_price Price range
+filter_price_name Under $4.00
+filter_size Type
+filter_size_name Mini Mouse
+
+%searchret !id:'button_filter' && !id:'refinement_layout'
+%setting !text:'Privacy' && !text:'Learn more' && !text:'User Agreement' && !text:'Settings'
+
+%app_filter_showmore !marked:'Show more'
+
+@cat !text:'Categories'
+
+%filter !id:'textview_filter_title' && !textcontains:'Price Range'
+%sort !marked:'Best Match' && !marked:'Newly Listed'
+@apply !id:'button_done'
+@sort_recent !marked:'Newly Listed'
+
+%detail !marked:'Buy it now'
+
+@cart.item_image !id:'item_thumbnail'
+@cart.item_count !id:'quantity_button_value'
+
+%main !id:'recycler_view_main'
+
+@checkout.subtotal !id:'checkout_total_value'
+@checkout.shippingcost !id:'shipping_cost'
+@checkout.addresses Ship to
+#@checkout.payments Pay with
+
+@main.search notexist
+@checkout.tax notexist
+
+%address !marked:'Ship to' && !marked:'ADD A NEW ADDRESS'
+@addredit.addr_line1 address_address_line_1_layout
+@address.address_options address_overflow_menu
+
+@signin.password edit_text_password
+
+config.allow_restart true

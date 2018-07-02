@@ -1,0 +1,45 @@
+search_nothing we did not find any products
+empty_cart_msg YOUR BASKET IS CURRENTLY EMPTY
+@remove_dialog_yes !marked:'REMOVE'
+
+search_autocomplete_ret foot
+search_query eye
+
+filter_brand Brand
+filter_brand_name Burberry
+filter_category Category
+filter_category_name Makeup
+#filter_color Color Family
+#filter_color_name Black
+@filter_dialog_yes !marked:'DONE'
+
+@skip !id:'onboarding_shop_now'
+%signin !textcontains:'there is an error with your email'
+
+%menu !marked:'Stores' && Inbox && Home && Just Arrived
+@item_price !id:'pp_prices'
+@item_rating !id:'product_rating'
+%sort !marked:'search_results_dropdown'
+@sort_review !marked:'search_results_dropdown_new'
+@sort_popular !marked:'search_results_dropdown_best_selling'
+@item_count !id:'text1'
+@cart !marked:'header_item_basket'
+@subtotal !id:'order_summary_merch_total_value'
+
+%main !id:'header_item_basket' && !id:'activity_sephora_tab_tab_layout' && !id:'cms_recycler_view'
+
+@searchret.searchret_item !id:'product_card'
+
+@checkout.addresses address_details
+@checkout.payments order_item_title
+
+@signin.password login_password
+
+@addredit.addr_name notexist
+@addredit.addr_first add_shipping_first_name
+@addredit.addr_line1 add_shipping_address
+@addredit.addr_save DONE
+
+@payment.card_new ADD CREDIT CARD
+
+%help FAQ && help_item_faq && help_item_version

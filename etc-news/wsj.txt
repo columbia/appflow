@@ -1,0 +1,16 @@
+%app_intro !CheckedTextView+marked:'U.S.'
+@pass_intro !CheckedTextView+marked:'U.S.'
+
+%app_intro2 nextButton && welcome_pager
+@pass_intro2 nextButton
+
+%welcome loginButton && continueReadingText
+#@welcome.existing loginButton
+@welcome.newuser freeTrialButton
+@welcome.skip continueReadingText
+
+%searchret search_result_text
+
+%detail menu_item_save && menu_item_change_text_size
+
+#@menu.bookmark nav_drawer_saved

@@ -1,0 +1,22 @@
+@detail.text txt_body_1
+
+@search_nothing No results found
+
+%searchret recycler_view && search_src_text && card_view && search_close_btn
+
+%app_intro jit_message
+@pass_intro !back
+
+#%detail article_main_content
+
+%list main_container
+
+%bookmark Saved && all_header && toolbar && More options && list_view
+@bookmark.item headline_wrapper
+
+@detail.share expand_activities_button
+
+# NEW
+@menu.bookmark Saved
+@bookmark.item_menu More Options
+@item_remove Clear All

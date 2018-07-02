@@ -1,0 +1,13 @@
+@list.item card_view
+@list.item card_view_post
+@ctxmenu.signin Log In Or Sign Up
+
+#%ctxmenu Login && Bookmarks && Rate Us
+
+%bookmark Bookmarks && Navigate up
+
+@detail.title header_name
+
+%detail Contribute && React && Bookmark
+
+%searchret menu_search && More options && buffet_fragment

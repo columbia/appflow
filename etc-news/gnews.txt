@@ -1,0 +1,15 @@
+#@list.menu !marked:'Open navigation drawer'
+
+@menu.home Top Stories
+@menu.cat_item World
+%searchret Close search && !id:'story_photo_container' && !id:'template_content' && not Search news
+@searchret.item_time story_source
+
+@detail.ctxmenu notexist
+@detail.bookmark notexist
+@list.cat_item notexist
+
+#NEW
+%detail Page info
+@detail.title topper-headline-wrapper
+@searchret.item_title !textcontains:'Murphy'

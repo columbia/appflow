@@ -1,0 +1,48 @@
+empty_cart_msg Your cart is empty
+search_nothing We have found 0 items
+
+filter_brand Manufacturer
+filter_brand_name VERBATIM
+filter_category Department
+filter_category_name Gaming Mice
+filter_price_name $0 - $10
+
+@searchbox !id:'homeSearchBar_searchLayout'
+@searchret.item_title !id:'searchListViewHolderProduct_descriptionTextView'
+@searchret.item_price !id:'searchListViewHolderProduct_finalPriceTextView'
+@searchret.item_rating !id:'searchListViewHolderProduct_ratingTextView'
+@searchret.filter !id:'menuEblastFilter_containerLayout'
+%filter !id:'searchListFilter_filterByLayout'
+%searchret !id:'searchListViewHolderProduct_descriptionTextView' && !id:'searchListViewHolderProduct_finalPriceTextView' && not !id:'searchListFilter_filterByLayout'
+
+%sort !id:'searchListSortPopupListView'
+@sort.sort_review !marked:'Best Rating'
+@filter.apply !id:'menuEblastFilter_containerLayout'
+
+@cart.item_remove !id:'shoppingCartProductList_removeItemLayout'
+
+@menu.signin !marked:'Login'
+
+@signin.email !id:'inputLayout_inputEditText'
+
+@cart_count !id:'cartIconLayout_cartNumberTextView'
+
+@checkout !marked:'SECURE CHECKOUT'
+
+%menu !id:'baseNavigationDrawer_DrawerLayout' && !marked:'My Account' && !marked:'Settings'
+
+%setting !marked:'Confirm when exit app'
+
+%main !id:'menuHome_store'
+
+@account.addresses Address Book
+@address.address_item shippingAddressAdapter_nameTitleLayout
+@addredit.addr_last addressEditInfo_lastNameTextInputLayout
+@addredit.addr_line1 addressEditInfo_address1RelativeLayout
+@addredit.addr_state addressEditInfo_stateEditText
+
+@searchret.sort Sort
+@account.payments Payment Methods
+@address.address_new shippingAddressList_addFloatingActionButton
+@menu.logout LOG OUT
+@register.email inputLayout_inputEditText

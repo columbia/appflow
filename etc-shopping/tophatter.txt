@@ -1,0 +1,35 @@
+search_autocomplete_ret forever
+search_nothing No results found
+
+filter_category Category
+filter_price_name $0 - $25
+
+@register.signin !id:'txt_have_an_account'+90+50
+@signin.signup !id:'txt_have_an_account'+80+50
+
+%signin !marked:'Sign In' && !id:'onboarding_signup'
+%register onboarding_fields && signup_slogan
+
+dialog_negative auction
+
+%app_tophatter_live !id:'action_toolbar' && !id:'slots_list' && !TextView+marked:'Live Now'
+
+%account !marked:'Edit Profile' && !id:'profile_scrollview'
+@account.addresses manage_addresses_btn
+@account.payments manage_cards_btn
+
+@search_keyword !id:'current_refine_option'
+
+@searchret.filter !id:'action_filter'
+@filter.filter_reset !id:'clear'
+
+@menu.setting !marked:'Settings'
+
+@register.register_gg btn_sign_google
+
+@menu.invite Share & Earn
+
+%addredit Enter your shipping address: && SAVE
+%setting Settings && Sounds && About
+%main Browse && Refine && Search && catalog_pager && catalog_name
+%orders My Orders && All && Unpaid && Shipped

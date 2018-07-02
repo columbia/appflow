@@ -1,0 +1,46 @@
+search_nothing no products found
+
+filter_category_name Women
+filter_price_name below $50
+
+@signup !id:'join'
+
+%app_intro !id:'nextButtonContainer'
+@pass_intro !id:'nextButtonContainer'
+
+%app_intro2 !id:'prelogin_tutorial_getstarted'
+@pass_intro2 !id:'prelogin_tutorial_getstarted'
+
+dialog_negative following
+
+@search_clear !id:'search_field'+95+50
+
+%filter !id:'filter_scroll_view'
+
+@searchret.filter !id:'btn_filter'
+
+%app_wanelo_offer sales_popup_sale_percent_view && sales_popup_close_button
+
+%checkout Buy && product_order_scroll_view && options && not Edit Shipping Info && not Add Credit Card
+
+@checkout.shippingcost Shipping
+@checkout.subtotal Cost
+@checkout.tax Taxes and fees
+
+%addredit Edit Shipping Info
+
+dialog_positive_button DONE
+@cardedit.card_save NEXT
+
+%welcome connect_facebook && signin_google && sign_in && join
+@welcome.skip notexist
+
+%app_wanelo_needscroll not custom_rating_bar_star_1_imageview && search_field && btn_filter_text && not !marked:'no products found'
+
+@main.search search_btn
+@searchret.item_price notexist
+@welcome.facebook Facebook
+@welcome.google Google
+
+%search search_field && search_fragment
+%cardedit Add Credit Card && NEXT && order_card_view

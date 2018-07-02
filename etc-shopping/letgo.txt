@@ -1,0 +1,33 @@
+search_nothing NO RESULTS NEAR YOU
+
+filter_category Categories
+
+%app_letgo_startup !textcontains:'Start Making Cash' && !marked:'Maybe Later'
+%welcome !id:'btn_private_access_signup'
+
+%app_letgo_detailintro !id:'product_detail_onboarding_close_iv' && !id:'product_detail_onboarding_touch_area'
+
+%register !id:'signin_full_name_form'
+
+@skip !class:'ImageButton'
+
+%main !id:'action_search' && !id:'product_list_swipe_refresh_layout' && !id:'imageViewLogo'
+%menu !id:'drawer_layout' && !id:'navigation_header_container'
+
+@searchret.item_image !id:'product_item_iv_image'
+
+@sort.sort_recent !marked:'Most recently published'
+%account !id:'user_profile_toolbar_user_detail_view_enlarged'
+
+@menu.signin !marked:'Log in now'
+
+%search !textcontains:'What are you looking'
+@searchret.filter action_filter
+#@searchret.item_title notexist
+
+%app_intro tooltip_close_iv
+@pass_intro tooltip_close_iv
+
+@signin.signup Sign Up
+%filter Filters && search_apply_button && not search_sorting_groupview && not Most recently published
+@sort.sort_popular notexist

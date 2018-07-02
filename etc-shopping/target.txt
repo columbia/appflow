@@ -1,0 +1,55 @@
+search_nothing no result for
+empty_cart_msg your cart is empty
+@remove_dialog_yes !marked:'REMOVE'
+
+# mouse out of stock...
+search_query mousepad
+
+filter_brand_name HyperX
+filter_category Category
+filter_price_name $15
+filter_color_name black
+
+@filter_dialog_yes !marked:'refine_back_button'
+
+# now default
+#@item_count_remove !marked:'0'
+
+%searchret !id:'plp_v2_list_view' && !id:'toolbar_container'
+@searchret.sort !id:'refine_action_sorting'
+%sort !marked:'price ascending' && !marked:'price descending'
+@sort.sort_pricehigh !marked:'price descending'
+@sort.sort_review !marked:'rating'
+@sort.sort_popular !marked:'best selling'
+
+@menu.home !marked:'Shop'
+
+%setting !textcontains:'Notifications' && !textcontains:'In-store location'
+
+@checkout.subtotal !id:'order_summary_subtotal_value'
+@checkout.totalcost !id:'order_summary_delivery_charge'
+
+%app_intro !marked:'Got it'
+@pass_intro !marked:'Got it'
+
+@checkout.tax !id:'order_summary_tax_value'
+
+%help Help && Cartwheel && Search & Browse
+#%contact How can we help? && CONTACT US
+
+@payment.card_new credit/debit
+
+@addredit.addr_save shipping_details_action_done
+@addredit.addr_first name_first_input
+@addredit.addr_name notexist
+
+@checkout.payments payment_compact_view
+
+%help Help && Account && REDcard
+@signin_fb notexist
+
+@address.address_new action_add
+
+%app_target_precheckout welcome back && auth_form_container && login_account && login_password && login_btn_sign_in
+
+@checkout.addresses shipping_address

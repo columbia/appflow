@@ -1,0 +1,38 @@
+empty_cart_msg No items in bag
+search_nothing No results were found
+
+filter_category Styles
+filter_category_name Flip
+filter_brand_name Havaianas
+filter_color_name Pink
+filter_price_name $25.00 and Under
+
+@item_count_1 !marked:'1 item'
+@item_count_2 !marked:'2 items'
+
+%cart !marked:'Bag Summary'
+%search !marked:'search_plate'
+
+%app_6pm_choosecat !marked:'Product Type' && not thiscannotexist
+%app_6pm_choosecat !id:'search_bread_crumb_scroll' && !id:'search_results_container' && not !marked:'Sandals' && not thiscannotexist
+
+@searchret.item_title !id:'product_name'
+@searchret.item_price !id:'product_price'
+@item_image !id:'product_image'
+@searchret.search_keyword !id:'title'
+
+@filter_reset !id:'title'
+@cart.item_count !id:'cart_list_item_quantity'
+
+%app_6pm_option !marked:'Select a size'
+
+@cart_count !id:'num_items'
+@cart.item_remove !marked:'menu_remove_all'
+
+%main !id:'home_scroll_view'
+search_autocomplete_ret Footwear
+
+@address.address_item address_label
+@searchret.filter menu_filter
+
+dialog_positive_button add

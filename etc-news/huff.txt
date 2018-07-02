@@ -1,0 +1,21 @@
+%app_intro United States && Brasil && Australia
+@pass_intro United States
+
+%list recyclerView && main_content && More options && Open && sectionEntryContainer
+
+%menu drawerLayout && search && not !focused:'true'
+%searchret drawerLayout && recyclerView && entryImageContainer && sectionEntryContainer
+
+@searchret.item_title !class:'TextView'
+
+%textsize Default && Large && XLarge
+@textsize.smaller Default
+
+@menu.bookmark Bookmarks
+
+%bookmark Bookmarks && contentFrame && appbar && issueMessage
+
+@bookmark.empty !textcontains:'No bookmarks'
+
+@list.item_title !class:'TextView'
+

@@ -1,0 +1,58 @@
+empty_cart_msg There currently are no items in your shopping cart
+search_nothing No products matched your search
+search_autocomplete_ret football
+
+%app_aliexpress_promotion !id:'poplayer_penetrate_webview_container_id' && !id:'closebtn'
+%app_aliexpress_tutorial !textcontains:'Try our new image search' && !marked:'tv_tv2'
+%app_aliexpress_tutorial2 !marked:'btn_got_it'
+%app_aliexpress_option !marked:'Product Option' && !marked:'Continue'
+%app_aliexpress_precart !marked:'BUY (0)' && !id:'select_all' && !marked:'Shopping Cart'
+%app_intro !id:'user_hint_close'
+@pass_intro !id:'user_hint_close'
+%app_intro2 !marked:'bt_got_it'
+@pass_intro2 !marked:'bt_got_it'
+
+%main !id:'search_box' && !id:'appbar' && !id:'home_slidingtabstrip' && not !id:'closebtn'
+%menu !id:'navdrawer'
+%welcome !id:'ll_login_register_root'
+@welcome.signup btn_register
+
+filter_category Categories
+filter_category_name Mouse & Keyboards
+filter_color_name White
+filter_size Type
+filter_size_name Bluetooth
+
+%search !id:'abs__search_list'
+
+%searchret !id:'search_result_loadding_container'
+#@searchret.item_title !id:'tv_product_list_tagged_title'
+#@searchret.item_price !id:'tv_productsummary_price'
+#@searchret.item_image !id:'riv_productsummary_img'
+#@searchret.item_rating !id:'tv_product_list_feedback_rating_score'
+#@searchret.filter !id:'ll_filter_btn'
+
+@sort.sort_review !marked:'Seller's Ratings'
+@sort.sort_popular !marked:'Number of Orders'
+@sort.sort_recent !marked:'Date Added (New to Old)'
+
+%filter !marked:'refine_title' && !marked:'btn_apply_refine'
+@cart.item_remove !id:'menu_delete'
+
+@main.cart !id:'menu_badge_main'
+
+dialog_positive_button cart
+
+@cart.checkout !id:'bt_buy_all'
+
+%checkout !marked:'Order Confirmation' && !marked:'PLACE ORDER'
+
+#%contact Customer Service && Frequently Asked Questions:
+
+%app_aliexpress_seladdr tv_auto_complete_query && !textcontains:'New York' && tv_address_desc
+@addredit.addr_state til_address_province
+@addredit.addr_name !id:'til_contact_name'
+@address.address_item rl_po_address
+
+@main.menu left_action
+config.allow_restart true

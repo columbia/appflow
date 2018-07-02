@@ -1,0 +1,81 @@
+invalid_search_query thiscannotexist
+invalid_username invalidusername
+invalid_password invalidpassword
+
+menu_signin Sign in
+#search_nothing did not match any products
+#empty_cart_msg Your Shopping Cart is empty
+
+@item_count_1 !marked:'1'
+@item_count_2 !marked:'2'
+@item_count_remove !marked:'0'
+
+cart_count_value 1
+
+search_query mouse
+search_clear_query dogfood
+search_autocomplete_query foo
+search_autocomplete_ret food
+
+addr_line1 1214 Amsterdam Ave
+addr_name Columbia Test
+addr_first Columbia
+addr_last Test
+addr_city New York
+addr_state New York
+addr_state_abbr NY
+addr_zipcode 10027
+addr_phone 6468888888
+
+card_no 5360271312161979
+card_exp 1118
+card_year 2018
+card_month 11
+card_name Brooke Turner
+card_cvv 137
+
+filter_brand Brand
+filter_brand_name HP
+filter_category Departments
+filter_category_name Electronics
+filter_color Color
+filter_color_name Blue
+filter_price Price
+filter_price_name $0 - $5
+filter_size Size
+filter_size_name Large
+filter_sort Sort
+
+dialog_negative_button no,dismiss
+dialog_positive_button yes
+dialog_positive remove
+dialog_negative location,update,upgrade
+
+%sys_permission !id:'permission_deny_button' && !id:'permission_allow_button'
+@sys_permission_allow !id:'permission_allow_button'
+@sys_permission_deny !id:'permission_deny_button'
+
+%sys_smartlock !marked:'credential_save_confirmation' && !marked:'credential_save_reject' && !marked:'credential_save_text'
+
+%sys_notification !marked:'NO' && !marked:'YES' && !textcontains:'notification'
+%sys_notification2 !marked:'Cancel' && !marked:'OK' && !textcontains:'notification'
+%sys_notification3 !marked:'Don't allow' && !marked:'OK'
+
+%sys_accounts !marked:'cancel' && !marked:'credentials_hint_picker_title' && !marked:'credential_picker_layout'
+@sys_accounts_cancel !marked:'cancel'
+
+%sys_prompt !marked:'no thanks'
+#%sys_prompt2 !Button+marked:'Cancel'
+%sys_prompt3 !Button+marked:'NO, THANK YOU'
+
+%sys_termofuse !marked:'Agree'
+%sys_termofuse2 !marked:'ACCEPT' && !marked:'DECLINE'
+
+%app_wait ProgressBar
+
+config.no_scroll_tags ["item_remove", "back", "searchbox", "remove_dialog_yes", "search_clear", "skip", "filter", "existing", "skip", "address_edit", "address_delete"]
+config.must_cleanup_keys ["cart_filled"]
+config.cleanup_dep_keys ["loggedin"]
+config.init_state {"loggedin": "false", "searched": "false", "filtered": "false"}
+
+config.restart_state_change {"searched": "false", "filtered": "false", "addr_addr_filled": "false", "addr_name_filled": "false", "addr_phone_filled": "false", "cardno_filled": "false", "cardcvc_filled": "false", "cardexp_filled": "false", "menu_extended": "false", "cardname_filled": "false"}

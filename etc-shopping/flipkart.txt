@@ -1,0 +1,55 @@
+username +15593165180
+
+# TODO: remove this
+search_nothing Sorry, no results found
+empty_cart_msg Your Cart is empty
+@remove_dialog_yes !marked:'REMOVE'
+search_autocomplete_ret foot
+
+filter_category Category
+filter_category_name Keyboards
+filter_brand_name HP
+
+%register !marked:'btn_msignup' && !marked:'btn_mlogin' && !marked:'btn_skip' && not !marked:'et_password'
+%menu !marked:'Electronics' && !marked:'Books & More' && !marked:'My Rewards'
+%menu !marked:'My Account' && !marked:'Notifications' && !marked:'My Rewards'
+%signin !marked:'mobileNo' && !marked:'et_password' && !marked:'SIGN IN'
+%search !marked:'search_autoCompleteTextView'
+%main !id:'cart_icon' && !marked:'Flipkart home'
+
+@signin !marked:'Existing User? SIGN IN'
+@searchbox !marked:'search_widget_textbox'
+@email !marked:'mobileNo'
+@login !marked:'SIGN IN'
+@signup !marked:'btn_msignup'
+@search_clear !marked:'clear_text'
+@item_price !marked:'product_list_product_item_price'
+@item_title !marked:'product_list_product_item_main_text'
+@item_rating !marked:'product_list_product_item_rating'
+@menu.cart !marked:'My Cart'
+
+@filter_dialog_yes !marked:'DONE'
+
+%filter !marked:'Filters'
+%detail !marked:'GO TO CART'
+
+%cart !textcontains:'My Cart'
+%account !marked:'My Account' && !marked:'My Orders'
+
+@cart.checkout !marked:'CONTINUE'
+@cart.item_count !R1.marked:'Qty:'
+@cart.item_image image
+
+@menu.terms Legal
+@menu.giftcard Gift Card
+
+@account.payments VIEW DETAILS
+%addredit Add a new address && !textcontains:'Building name'
+@detail.share Share
+@menu.help Help Centre
+%notif in_app_notfication_list_layout
+@back btn_skip
+
+@main.search search_widget
+
+config.NOTFOUND_SCROLLDOWN_LIMIT 5

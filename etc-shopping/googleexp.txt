@@ -1,0 +1,48 @@
+search_nothing No results found
+empty_cart_msg Your cart is empty
+
+config.init_state {"loggedin": "true"}
+
+filter_category Category
+filter_category_name Mouse Pads
+#filter_brand_name Logitech
+#filter_color Type
+#filter_color_name Multi-touch
+#filter_size Number of buttons
+#filter_size_name 3 button
+filter_price_name Up to
+
+@filter_dialog_yes !marked:'APPLY'
+
+%searchret !id:'product_name' && !id:'store_title' && !id:'horizontal_carousel' && !marked:'FILTER'
+@searchret.filter !marked:'FILTER'
+#@searchret.item_title !id:'product_name'
+#@searchret.item_image !id:'product_image_container'
+#@searchret.searchret_item !id:'search_result_product_content_view'
+
+%filter !id:'search_filter_listview' && !marked:'Category'
+@filter_reset !marked:'CLEAR'
+@filter.sort !marked:'Sort by'
+#@apply !back
+@cart_count !id:'action_bar_cart_quantity_text'
+@item_count_remove cart_item_remove_action
+@cart.checkout !marked:'GO TO CHECKOUT'
+
+@checkout.shippingcost !marked:'Shipping & service'
+@checkout.subtotal !marked:'Item(s)'
+
+config.WAITIDLE_MAXTRY 50
+
+@menu.cat !marked:'Departments'
+%setting !marked:'Settings' && !marked:'Notifications' && !marked:'History'
+
+%main !id:'main_activity_frame_layout' && not order_list
+
+%app_intro !View+desc:'Dismiss'
+@pass_intro !id:'menu_shopping_cart'
+
+%orders No order history
+%cat Grocery && Beverages
+@checkout.tax Estimated tax
+
+%detail item_quantity && product_overview_add_to_list_button && competitive_offer_price

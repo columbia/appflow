@@ -1,0 +1,57 @@
+empty_cart_msg Your shopping cart is empty
+search_nothing No results found for
+
+%app_homedepot_zip !marked:'Find & Choose a Local Store'
+
+filter_category Category
+filter_category_name Outdoors
+filter_price_name $0 - $10
+filter_brand_name JT Eaton
+
+%signin sign_email_layout && signin_submit_button
+@signin.signin_forgot !id:'reset_psw_link_tv'
+
+#%app_homedepot_tutorial !id:'tutorial_pages_image' && not !id:'tutorial_pages_btn_skip'
+
+%search !id:'keyword_history_LV'
+
+%app_intro !id:'plp_swipe_coachmark_frame_rl'
+@pass_intro !id:'plp_swipe_coachmark_frame_rl'
+
+%app_intro2 No, thanks
+@pass_intro2 No, thanks
+
+%searchret plp_search_header && plp_all_products && plpRecyclerView
+
+#@searchret.search_keyword !id:'browse_category_name'
+@searchret.filter sortOptions
+@searchret.sort notexist
+@filter.sort !id:'sort_refine_sort_spinner'
+@apply !Button+textcontains:'VIEW RESULTS'
+%filter !id:'sort_refine_layout'
+@filter_reset !id:'refinement_applied_remove_iv'
+
+%checkout !marked:'Secure Checkout' && !marked:'Pick Up Options'
+%checkout_notsignedin !marked:'Secure Checkout' && !marked:'sign in'
+#@checkout.subtotal !id:'merchSubTotal'
+#@checkout.tax !id:'salesTax'
+
+@menu.help Information
+
+%main titleTV && txt_search && toolbar_cart && storeTV
+@searchret.item_image productImage
+
+%about About the App
+
+config.NOTFOUND_SCROLLDOWN_LIMIT 5
+
+@apply sort_refine_footer
+
+@cart.item_count cartItem__qtyInput
+
+%app_wait Loading...
+
+%app_message2 STAY ON PAGE && LEAVE PAGE
+@app_message_continue LEAVE PAGE
+
+config.NOTFOUND_SCROLLDOWN_LIMIT 5

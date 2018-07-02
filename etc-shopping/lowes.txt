@@ -1,0 +1,39 @@
+search_nothing WE COULDN'T FIND ANY
+empty_cart_msg Your cart is empty
+@remove_dialog_yes !marked:'REMOVE'
+
+filter_brand_name Safavieh
+filter_category Categories
+filter_category_name Home Decor
+filter_price_name $10 - $15
+
+%register !id:'next' && !id:'back' && !id:'scan' && !id:'cardNumberLayout'
+@skip !id:'startShopping'
+
+%app_lowes_findstore !marked:'OR FIND MY LOCATION' && !marked:'DONE' && !textcontains:'Find Your Store'
+%app_lowes_tutorial !marked:'GOT IT'
+
+#@login !id:'next'
+@login !Button+marked:'Sign In'
+#@signin.back !id:'back'
+@signin.back !back
+
+%searchret !id:'productName' && !id:'products_filter_button' && !id:'products_sort_button'
+@searchret.item_title !id:'productName'
+@searchret.item_rating !id:'ratings_view_reviews'
+
+%detail !id:'productName' && !id:'epcContainer'
+
+@menu.cat !marked:'Shop'
+
+config.WAITIDLE_MAXTRY 10
+
+@cart.cart_subtotal !id:'cartSubTotal'
+
+@register.back !id:'back'
+
+@detail_image viewPager
+@addredit.addr_line1 addressLine1
+
+@sort.sort_review Customer Ratings
+@register.email cardNumber

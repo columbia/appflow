@@ -1,0 +1,14 @@
+%app_smartnews_welcome Turn the page for more news
+
+@list.cat_item !marked:'header'
+@list.item_title titleTextView
+@list.item_image imageView
+
+%app_intro DO NOT ANSWER
+@pass_intro DO NOT ANSWER
+
+%detail contentViewPager && actionButton
+@detail.text floatWebContainer
+
+%setting Settings && Article font size && Push notification settings
+@setting.textsize Article font size

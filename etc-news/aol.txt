@@ -1,0 +1,13 @@
+#@menu.bookmark Saved
+
+#@ctxmenu.textsize Change Text Size
+
+#@list.item_title title
+
+@list.cat_item Entertainment
+
+#%bookmark Saved && toolbar && news_feed_fragment && global_phone_footer
+
+@register.signin notexist
+#NEW
+%welcome Close && fte_skip_button

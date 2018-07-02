@@ -1,0 +1,56 @@
+search_nothing No results found for
+empty_cart_msg SHOPPING BAG EMPTY
+@remove_dialog_yes !Button+marked:'REMOVE'
+
+filter_color Colour
+filter_price_name 690
+
+%app_myntra_update sb__inner && sb__text && sb__action
+
+@signup !marked:'Signup'
+@signup !id:'btn_signup'
+
+#%sys_myntra_signupmethod !textcontains:'Sign up to get a personalized' && not !marked:'Create Account'
+#%register !textcontains:'Sign up to get a personalized' && not !marked:'Create Account' && not !id:'et_email_address'
+#%register !marked:'Create Account' && !marked:'et_email_address'
+#%signin !textcontains:'Log in to get a personalized'
+%welcome !id:'ll_skip' && !id:'btn_login' && !id:'btn_signup' && !id:'initiate_dialog' && not !id:'et_email_address'
+%app_myntra_permission !marked:'Permissions Required' && !marked:'Give Permission'
+
+@register.signin !id:'tv_login'
+
+
+@signin.back !marked:'tv_skip'
+
+%searchret !id:'pdp_filter_action' && !id:'ll_product_list_sort'
+@searchret.item_title !id:'tv_additonal_info'
+
+@detail_addcart !id:'ttv_buy_now_middlebar'
+
+@cart.item_remove !textcontains:'REMOVE'
+
+%main !id:'ll_react_container' && action_bar_root && Myntra && !ImageView+no:'11' && !ScrollView+no:'1' && !HorizontalScrollView+no:'1'
+#@main.menu !marked:''
+@main.search !ImageView+no:'1'
+@main.cart !ImageView+no:'2'
+@main.cart_count !TextView+no:'3'
+
+%menu Home & Living && SHOP FOR && not et_search_string
+
+%detail SAVE && ADD TO BAG && +INFO
+
+%address Add New Address && ADDRESS && !textcontains:'Change'
+@address.address_item address-content
+
+%addredit ADDRESS && address-label
+
+@welcome.skip SHOP NOW
+
+%search et_search_string && voice_search_layout
+@menu.contact CONTACT US
+
+@cart.item_count !R1.marked:'Qty:'
+
+@account.addresses Addresses
+@account.payments Saved Cards
+@payment.card_new Add Card

@@ -1,0 +1,11 @@
+%ctxmenu Enable night mode
+
+%searchret homepage_main_container && !textcontains:'Results for'
+
+@searchret.keyword actionbar_subtitle
+
+%textsize small_font_size_adjust && large_font_size_adjust
+@smaller small_font_size_adjust
+@larger large_font_size_adjust
+
+@bookmark.empty No saved stories.

@@ -1,0 +1,58 @@
+search_query camera
+
+#%menu !id:'drawer_menu_items_list'
+
+%app_qvc_license !marked:'ACCEPT' && !marked:'DECLINE'
+
+empty_cart_msg There are no items in your Shopping Cart
+search_nothing 0 results for
+
+filter_category Category
+filter_category_name Lenses
+filter_brand_name Canon
+filter_price ^Price
+filter_price_name $0 - $25
+
+#@main.searchbox !textcontains:'Enter item number or keyword'
+
+@menu.signin !textcontains:'Sign In'
+
+@searchret.item_price !id:'tvQVCPrice'
+
+%filter !textcontains:'Brand' && !textcontains:'Features' && not !textcontains:'Recently On Air'
+%searchret listWrapper && recycler && !textcontains:'Items' && not promotional_banner_module_layout && not !textcontains:'Sort By'
+#@searchret.filter !id:'refine_view_container'
+
+#@apply !marked:'Accept'
+
+dialog_positive_button continue
+
+
+@addredit.addr_line1 evNewAddressLine1
+@addredit.addr_save CONTINUE
+@cardedit.card_save CONTINUE
+
+%shipping Shipping Method && Step 2 of 4
+%payment Payment Method && ENTER A NEW CARD
+
+config.observe_remove_hidden_ocr false
+@menu.logout Sign Out
+
+%app_message2 CONTINUE SHOPPING && GO TO CART
+@app_message_continue CONTINUE SHOPPING
+
+%account My Account && Account Info
+@menu.contact Contact QVC
+
+%app_qvc_menuclosed !textcontains:'For the Home' && !textcontains:'More' && not !textcontains:'Manage Reminders'
+
+%search query && clear && voiceInput
+
+%app_intro2 onboarding_page1_title && start
+@pass_intro2 start
+
+%app_intro onboardingPageContainer && gotIt
+@pass_intro gotIt
+
+dialog_positive_button checkout
+%terms General Terms of Use

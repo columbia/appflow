@@ -1,0 +1,34 @@
+%app_intro Welcome to the Guardian && Sign In
+@pass_intro Sign In
+
+#%signup create account && register_username && register_password
+
+%signin email && password && forgot_password_button
+
+%app_intro2 !marked:'Continue' && indicator && title && text
+@pass_intro2 Continue
+
+#@list.menu Open Menu
+
+%app_guardian_menumore Search && Settings && show_more && not sfl_text
+
+%bookmark saved_page_list
+@bookmark.empty empty_list_text
+
+%searchret search_results && not message_text
+
+@searchret.item_time article_time
+@searchret.item_title article_title
+
+%app_intro3 !marked:'Got it!'
+@pass_intro3 !marked:'Got it!'
+
+@list.item card_section_top
+
+@register.signin bottom_bar_text
+
+@bookmark.item_remove remove_text_view
+@bookmark.item card_section_top
+
+@list.cat_item notexist
+@searchret.item_image notexist

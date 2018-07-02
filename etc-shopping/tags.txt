@@ -1,0 +1,71 @@
+universal menu*, back*, cart*, search*, continue*, account*, signin*,
+                signup*, cat*, item_title, item_price, item_image, item_brand,
+                setting*, cart_count*, placeorder, share*,
+                item_rating
+main searchbox
+checkout subtotal, shippingcost*, totalcost, tax*, addresses*, payments*,
+         card_new*, card_edit, card_select, card,
+         address_new*, address_edit, address_select, address_item,
+         shipmethod
+addredit addr_name*, addr_line1*, addr_line2*, addr_city*, addr_state*,
+         addr_zipcode*, addr_phone*, addr_country*, addr_save*, addr_first*,
+         addr_last*
+cardedit card_no, card_cvv, card_exp, card_name, card_month,
+                card_year, card_save, billing_line1, billing_line2,
+                billing_name, billing_first, billing_last, billing_zipcode,
+                billing_city, billing_state, billing_country, billing_phone
+filter filter_list, apply, filter_reset*, sort*,
+            filter_brand*, filter_color*, filter_size*, filter_category*,
+            filter_price*
+sort sort_list, sort_pricelow*, sort_pricehigh*, sort_recent*,
+            sort_review*, sort_reset*, apply, sort_popular*
+account addresses*, payments*, logout*
+setting addresses*, payments*, option
+address address_new, address_edit, address_delete, address_list,
+            address_options, address_select, address_item
+payment card_edit, card_delete, card_select, card_new, card_option, card
+search search_input*, search_suggest, search_clear*, noret_msg*
+paywith paywith_list, creditcard*, paypal*
+shipping shipping_list, shipmethod
+cart cart_list*, cart_item, item_remove, item_count, cart_tax,
+            cart_subtotal, cart_total, cart_shipping, checkout, empty_msg
+detail detail_title, detail_image, detail_price, detail_count,
+            detail_buy, detail_addcart, detail_brand
+searchret filter*, sort*, searchret_item, searchret_list*, search_keyword
+list filter*, sort*, list_list*, list_item
+signin email*, password*, login*, signin_forgot*, signin_fb*, signin_gg*
+menu menu_list*, home*, logout*, orders*, help*, contact*, terms, invite*,
+     locator*, about*, faq*, notifications*, giftcard*
+cat cat_parent*, cat_list*, cat_item, cat_image, cat_title
+register register*, firstname*, lastname*, password*, username*, email*,
+                password2*, phonenumber*, address*, email2*, register_gg*,
+                register_fb*, register_name*, zipcode*
+welcome existing*, skip*, facebook*, google*
+orders noorder_msg*
+about version*
+terms terms
+help query, question
+notif option, none_msg, notif_item
+contact phone, email
+single search, cart, searchbox, empty_msg,
+       setting, phone, email,
+       card_no, card_cvv, card_exp, card_name,
+       card_month, card_year, card_save, billing_line1, billing_line2,
+       billing_name, billing_first, billing_last, billing_zipcode,
+       billing_city, billing_state, billing_country
+
+ignored_screens cat2, cat3, list, shipping, paywith
+ignored_elements cart_list, placeorder, filter_list, sort_list, search_suggest, paywith_list,
+                 shipping_list, searchret_list, cart_tax, cart_total, cart_shipping, cat_list,
+                 cat_image, cat_title, menu_list,
+                 register:username, register:password2, register:phonenumber, register:address, register:zipcode,
+                 register:email2, register_name, menu:signup, checkout:card,
+                 checkout:address_item, checkout:item_image, checkout:item_title,
+                 checkout:item_price, checkout:address_edit, checkout:address_new,
+                 checkout:card_new, search:cart, checkout:shipmethod, register:cart,
+                 addr_line2, address_select, address_list, addredit:addr_country,
+                 addredit:menu, cart:signin, contact:email, contact:phone,
+                 detail_count, detail_buy, detail_brand,
+                 billing_line1, billing_line2,
+                 billing_name, billing_first, billing_last, billing_zipcode,
+                 billing_city, billing_state, billing_country, billing_phone

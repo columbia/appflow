@@ -1,0 +1,47 @@
+empty_cart_msg Your shopping cart is empty
+search_nothing We couldn't find any results for
+
+search_query cup
+
+%menu !id:'navigation_header_container'
+
+%setting !marked:'Settings' && !marked:'Enable History'
+
+%welcome !id:'btn_register_dialog' && !id:'btn_sign_in_dialog'
+@welcome.signup !marked:'Register'
+
+%search !id:'new_search_taxonomy_recyclerview'
+
+%app_etsy_searchcat !marked:'Top Categories' && !id:'search_content_view'
+@searchret.item_title !id:'listing_title'
+
+filter_category Categories
+filter_category_name Clothing
+
+@filter.sort !marked:'Sort By'
+@sort.sort_review notexist
+@sort.sort_popular notexist
+
+@apply !marked:'Done'
+
+%main !marked:'Recommended' && !marked:'Etsy Picks' && !marked:'Your Activity'
+
+%app_etsy_option !marked:'Select a size'
+
+%account !marked:'User profile'
+
+%sort !marked:'Most Relevant' && !marked:'Sort By' && !marked:'Highest Price'
+%filter !id:'search_filters_header_text' && !id:'search_filters_done'
+
+@detail.detail_addcart !marked:'Add to Cart'
+
+@menu.orders Purchases
+
+%addredit FULL NAME && STREET && ZIP CODE
+@addredit.addr_line1 address-first-line
+
+@cardedit.card_no input-wrapper
+@cardedit.card_save Continue
+
+@menu.setting Settings
+@searchret.item_rating notexist

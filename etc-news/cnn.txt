@@ -1,0 +1,16 @@
+@list.cat_item verticalImageView
+#@list.item_title article_headline
+
+%app_cnn_hide fabmenu && not Share && not Bookmark
+
+@detail.bookmark Bookmark
+
+%app_intro Next
+@pass_intro Next
+%app_intro2 Save Settings
+@pass_intro2 Save Settings
+
+#%bookmark imageViewCnnLogo
+@bookmark.empty No saved stories
+@bookmark.item thumbnail
+@bookmark.item_remove Delete

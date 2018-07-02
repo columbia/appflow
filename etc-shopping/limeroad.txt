@@ -1,0 +1,35 @@
+%app_limeroad_intro men_layout && women_layout
+
+empty_cart_msg There are no items in your cart
+search_nothing We are scouting around
+search_autocomplete_ret foot
+
+filter_brand_name Disney
+filter_size_name ONE SIZE
+filter_price_name 500
+filter_category CATEGORIES
+filter_category_name Kitchen
+
+config.init_state {"loggedin": "true"}
+
+%account !marked:'My Account' && !marked:'My Orders' && !marked:'My Returns'
+%menu !id:'layout_side_menu'
+#@search.search_clear !id:'clear_flow_layout'
+
+%searchret !id:'layout_category_listing'
+%filter !id:'list_filter_options'
+
+@detail.detail_addcart !id:'add_to_bag'
+
+@cart_count !id:'hotlist_hot'
+
+@cart.item_image !id:'img_object'
+#@cart.cart_subtotal !id:'text_total_MRP'
+
+@addredit.addr_phone edit_mobile
+
+%search search_back_ib && search_custom_et
+
+%cart My Cart && More options && layout_checkout && layout_item_count && qnty_tv
+
+%addredit edit_name && CONFIRM ORDER && edit_mobile && edit_address_1

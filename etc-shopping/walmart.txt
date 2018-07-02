@@ -1,0 +1,57 @@
+search_nothing We found 0 results
+empty_cart_msg There are no items in your cart
+
+filter_size Type
+filter_size_name Wireless
+
+%menu !marked:'Shop by Department' && !marked:'Weekly Ad' && !marked:'Savings Catcher'
+
+@cat !marked:'Shop by Department'
+#@sort !marked:'Sort'
+@sort_review !marked:'Customer Rating: High to Low'
+@sort_popular !marked:'Best Sellers'
+
+@filter_dialog_yes !marked:'OK'
+
+@cart.item_count !class:'Spinner'
+@cart.item_image !ImageView+no:'1'
+
+@checkout !textcontains:'Check Out'
+
+%app_walmart_shipping !textcontains:'Shipping and Pickup' && !marked:'Continue'
+
+@address_select !desc:'Shipping address tile'
+@continue !desc:'Continue'
+
+@item_rating !id:'shelf_item_view_review_stars'
+
+@account !marked:'Personal Info'
+%account !marked:'Personal Info' && !marked:'Full name' && !marked:'Email'
+
+%setting !marked:'App Permissions' && !marked:'Search'
+
+#%search !id:'search_src_text' && not !id:'home_carousel_root' && not !id:'search_result_view_pager' && not Purchase History
+%main !id:'home_carousel_root'
+
+%signin !id:'email' && !id:'password' && not !id:'firstname'
+
+dialog_positive_button credit
+
+#@address.address_item address-details
+
+@addredit.addr_line1 !EditText+no:'4'
+@addredit.addr_name notexist
+@addredit.addr_first !EditText+no:'1'
+@addredit.addr_last !EditText+no:'2'
+
+%addredit Set as my preferred address
+%about Version 17.22.4
+
+@detail.detail_addcart add_to_cart_button
+@sort.sort_recent New
+
+@main.cart_count online_cart_icon
+
+%help Support Home Page
+@notif.option preferences_mute_switch
+@address.address_new Add new address

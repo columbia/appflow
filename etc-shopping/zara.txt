@@ -1,0 +1,49 @@
+%app_intro !id:'country_list_next'
+@pass_intro !marked:'country_list_next'
+
+%search !focused:'true' && !id:'search_filter_text' && !marked:'SEARCH' && !marked:'MY ACCOUNT'
+%main !id:'search_filter_text' && !text:'SCAN' && !text:'MY ACCOUNT' && !id:'action_bar_root'
+#@account !text:'MY ACCOUNT'
+
+empty_cart_msg Your basket is empty
+search_nothing No products found
+
+@searchret.search_keyword !EditText+no:'2'
+@searchret.item_image product_item_layout
+
+%app_zara_searchcat !id:'search_facet_list'
+
+config.REMOVE_BOTSLIDE_BACKGROUND false
+
+%app_zara_option !id:'product_detail_gallery_size_list'
+%detail !id:'product_detail_gallery_buttons'
+@cart !id:'menu_checkout_main'
+@cart.item_image !id:'product_basket_list_item_image'
+
+@menu.home !marked:'PRODUCTS'
+
+@cart.checkout !marked:'NEXT'
+
+@checkout.subtotal !id:'checkout_card_total_price'
+@checkout.shippingcost !id:'checkout_shipping_spot'
+
+@detail.detail_title !id:'zara_activity_toolbar_content'
+
+@checkout.tax notexist
+%checkout Confirm && Shipping && Payment && Products && not CARD NUMBER
+
+@account.payments Payment data
+
+%addredit address_geocoding_button && not register_fragment
+
+@addredit.addr_name notexist
+@addredit.addr_first Name
+@addredit.addr_last Last Name
+@addredit.addr_zipcode Post Code
+@addredit.addr_phone Phone number (mobile)
+
+%payment profile_mycard_list_ll
+%cardedit MasterCard && NEXT && checkout_input_card_number
+
+config.observe_remove_hidden_ocr false
+config.allow_restart true

@@ -1,0 +1,19 @@
+%app_intro fragment_user_guide_guest
+@pass_intro fragment_user_guide_guest
+
+@list.search tab_explore
+
+@search_input search_box_container
+
+@search_nothing No relevant articles.
+
+%searchret txv_header_title && channel_news_normal_item && channel_header
+
+@searchret.keyword txv_header_title
+
+@detail.bookmark button_like
+
+@menu.signin btn_login
+@menu.bookmark My favorites
+
+%bookmark frag_db_list && lsv_db_list

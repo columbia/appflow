@@ -1,0 +1,80 @@
+empty_cart_msg Your cart is empty
+search_nothing Sorry!
+
+search_autocomplete_ret foot
+
+filter_brand_name ASOS
+filter_color Color
+filter_color_name Black
+filter_category Product Type
+filter_category_name Shoes
+filter_size_name US 4
+
+@filter_dialog_yes !marked:'DONE'
+
+%app_asos_intro !id:'splash_change_settings_button' && !marked:'MEN'
+
+%account !marked:'Account settings'
+%menu Home && Cart && App Settings && My Account
+
+%signin !marked:'Sign up today.' && !marked:'SIGN IN'
+@signin.signup !marked:'Sign up today.'
+@signin.signin_forgot !marked:'fragment_identity_login_forgotten_label'
+
+%register !WebView+textcontains:'Join'
+#@menu.account !id:'drawer_button_account'
+#@menu.signin !id:'action_login'
+#@searchret.search_keyword !id:'products_title'
+#@searchret.item_price !id:'productTitle'
+
+%searchret !id:'product_list_page_root_view'
+
+%app_asos_option !TextView+text:'SIZE GUIDE' && M && L && S
+
+#@detail.detail_addcart !marked:'Add to cart'
+
+@cart_count !id:'notif_count'
+@cart.item_remove !id:'row_remove'
+@cart.item_count !id:'row_details'
+
+@checkout !marked:'Pay Securely Now'
+
+@checkout.subtotal !marked:'checkout_summary_subtotal'
+@checkout.shippingcost !id:'delivery_options_price'
+
+%main !marked:'Home' && !marked:'Categories' && !marked:'Search' && !marked:'Saved'
+
+#@menu.home !textcontains:'Home'
+
+%checkout !id:'checkout_root_view'
+
+config.NOTFOUND_SCROLLDOWN_LIMIT 4
+
+@signin.signin_fb fragment_identity_login_facebook_sign_in
+
+%app_asos_manual Or enter address manually
+
+@addredit.addr_first first_name_edittext
+@addredit.addr_name notexist
+@addredit.addr_city add_address_suburb_edittext
+@payment.card_new ADD NEW PAYMENT METHOD
+
+%app_paywith ADD PAYMENT && PAYPAL && !textcontains:'credit'
+#@menu.help drawer_button_help
+
+@checkout.addresses checkout_change_delivery_button
+@account.addresses Address book
+@main.cart notexist
+@menu.setting App Settings
+@menu.help Help & FAQs
+@menu.logout Sign out
+
+%filter refine_toolbar && apply_filters
+@address.address_delete list_item_delete_cta
+
+%app_intro !marked:'Ok, thanks'
+@pass_intro !marked:'Ok, thanks'
+
+@detail.cart bag_fab
+
+%app_asos_snack snackbar_text

@@ -1,0 +1,55 @@
+search_nothing find any result for
+empty_cart_msg Your shopping bag is currently empty
+
+search_autocomplete_ret footed
+
+filter_size_name 2-3Y
+
+%app_hm_country !marked:'PLEASE SELECT A REGION'
+%app_hm_option !textcontains:'Please select a size before'
+
+@menu.home !marked:'Start'
+
+%search !marked:'search_bar'
+
+%detail !id:'clickable_drawer_viewgroup_content'
+@detail.detail_addcart !id:'store_viewer_imageview_shop'
+@detail.detail_image !id:'zoom_view_imageview_image'
+@cart.item_image !id:'bag_item_imageview_thumb'
+@cart.item_count !id:'bag_item_textview_quantity_value'
+@searchret.search_keyword !id:'product_listing_textview_department_name'
+@cart_count !id:'store_menu_item_bag_textview_badge'
+
+@signin.signin_forgot !marked:'Forgot login details?'
+#@signin.signup !marked:'New customer?'
+
+@menu.account !marked:'My H&M'
+@menu.cart !marked:'Bag'
+%account !marked:'Pending orders' && !marked:'Saved card'
+@cart.checkout !marked:'Checkout'
+
+%checkout !WebView+desc:'Checkout' && not CHANGE ADDRESS && not Address line 1:
+%searchret !id:'product_listing_title_view' && !id:'product_listing_gridview_grid'
+
+%main !id:'startpage_recycler_view'
+
+%menu !id:'navigation_drawer'
+
+@account.payments Saved card
+@cardedit.card_save Pay
+
+@address.address_item home-address
+
+%addredit Address line 1: && Address line 2:
+@addredit.addr_name careOf
+@addredit.addr_line1 addressLine1
+@addredit.addr_zipcode postCode
+@addredit.addr_state region
+
+@menu.contact Support
+@menu.giftcard Gift Card
+@checkout.subtotal Merchandise total:
+@checkout.addresses address-list
+
+config.observe_remove_hidden_ocr false
+@address.address_new Enter new address

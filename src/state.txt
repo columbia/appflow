@@ -1,0 +1,48 @@
+R.1 Start
+R.1 Test meta:start app picked
+R.1 Route route [  go home,] picked
+R.1 Trying test meta:start app
+R.2 Start
+R.1 Start
+R.1 Test meta:start app picked
+R.1 Route route [  go home,] picked
+R.1 Trying test meta:start app
+R.2 Start
+R.2 Trying test list:click search
+R.3 Start
+R.3 Trying test search:clear query
+R.4 Start
+R.4 Test search:autocomplete picked
+R.4 Route route [  go home,  start app,  click search,] picked
+R.4 Trying test search:autocomplete
+R.5 Start
+R.5 Test search:no result picked
+R.5 Route route [  go home,  start app,  click search,] picked
+R.5 Trying test search:no result
+R.6 Start
+R.6 Test search:do a search picked
+R.6 Route route [  go home,  start app,  click search,] picked
+R.6 Trying test search:do a search
+R.7 Start
+R.7 Trying test searchret:see keyword
+R.8 Start
+R.8 Trying test searchret:see image
+R.9 Start
+R.9 Trying test searchret:see title
+R.10 Start
+R.10 Trying test searchret:see time
+R.11 Start
+R.11 Trying test searchret:click title
+R.12 Start
+R.12 Test searchret:click image picked
+R.12 Route route [  go home,  start app,  click search,  do a search,] picked
+R.12 Trying test searchret:click image
+R.13 Start
+R.13 Test searchret:click item picked
+R.13 Route route [  go home,  start app,  click search,  do a search,] picked
+R.13 Trying test searchret:click item
+R.14 Start
+R.14 Test searchret:go to sort picked
+R.14 Route route [  go home,  start app,  click search,  do a search,] picked
+R.14 Trying test searchret:go to sort
+R.15 Start

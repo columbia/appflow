@@ -1,0 +1,13 @@
+
+search_nothing This item could not be found
+
+%welcome !marked:'button_sign_in' && !marked:'button_email' && !marked:'button_facebook'
+#%sys_location !marked:'Enable Location' && !marked:'Cancel'
+
+%signin !id:'button_sign_in'
+
+%account !id:'edit_profile'
+
+@searchret.search_keyword !id:'toolbar'
+@detail.detail_title !id:'item_description_text_view'
+@detail.detail_image item_image_scrollview

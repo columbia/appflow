@@ -1,0 +1,23 @@
+#@detail.bookmark detail_bottom_bookmark
+#@detail.share detail_bottom_share
+@detail.ctxmenu detail_action_bar_more
+
+%ctxmenu Font size && Block this provider && Report
+
+#%textsize Adjust font size of articles
+@textsize.apply DONE
+
+%searchret et_search_content && iv_clear_content && item_container
+%searchret No articles found
+
+%detail bottom_share_layout
+
+#%bookmark Saved articles
+@bookmark.item_remove item_more
+
+#@searchret.keyword et_search_content
+
+@searchret.item_time notexist
+# NEW
+%list title_logo && news_fragment && Home && Live.me && My Profile
+@list.cat_item notexist

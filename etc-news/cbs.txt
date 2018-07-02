@@ -1,0 +1,30 @@
+@welcome.skip no_thanks_show_me_the_latest
+
+%app_intro Interstitial close button
+@pass_intro Interstitial close button
+
+@search_nothing !textcontains:'No content found'
+
+%searchret search_result_total && search_list
+
+@searchret.keyword search_result_total
+@detail.bookmark bookmark_btn
+
+@bookmark.empty noBookmark
+
+@list.item news_item_recycler_news_full_layout
+
+#%app_intro2 news_item_recycler_quick_read_title
+#@pass_intro2 news_item_recycler_full_story
+
+@bookmark.item bookmark_title
+
+#%menu left_drawer && rbLive && rbNews
+
+#@menu.search ibMenuSearch
+
+# NEW
+%welcome no_thanks_show_me_the_latest
+@searchret.item_image notexist
+
+config.allow_restart true

@@ -1,0 +1,76 @@
+%app_intro !marked:'img_cross' && !textcontains:'Explore more on'
+@pass_intro !marked:'img_cross'
+%app_intro2 bottom_cancel_smmo_coach
+@pass_intro2 bottom_cancel_smmo_coach
+%app_message2 btn_continue && Added to bag
+@app_message_continue btn_continue
+
+#%main !marked:'Open' && !id:'render_search' && !id:'menu_cart' && !id:'parentRecyclerView'
+
+empty_cart_msg YOUR SHOPPING BAG IS EMPTY
+search_nothing You have hit an empty rack
+
+invalid_search_query zzzzzzzzzzzzzzzzzzzzz
+
+search_autocomplete_ret Foot
+
+filter_category category
+filter_category_name Clothing
+filter_brand_name Disney
+filter_price_name below 500
+filter_size_name XL
+
+%menu !id:'left_drawer' && !marked:'Track Order'
+
+#@menu.account Account Details
+
+%register !marked:'Sign Up' && !marked:'First Name' && !marked:'Last Name'
+
+@welcome.skip !class:'ImageButton'
+
+%app_jabong_option !marked:'Select Size' && !id:'flow_scrollLayout'
+
+@cart_count !id:'menu_cart'
+@register.signin !id:'text_login'
+
+@cart.item_image !id:'img_product_cart'
+
+#@signin.login !id:'btn_login_new'
+
+#@checkout.shippingcost notexist
+
+%account !textcontains:'Welcome' && My Address && Personal Info
+
+@address.address_item row_parent_layout
+@address_edit Edit
+#@addredit.addr_save DONE
+
+%addredit Add New Address && DONE && Home Address
+%about about jabong && !textcontains:'Jabong.com'
+@menu.logout Logout
+
+@cardedit.card_save btn_pay
+@main.searchbox render_search
+@main.search notexist
+@menu.invite Refer and Earn
+@searchret.item_rating notexist
+
+@menu.faq FAQ
+@menu.help Help/Support
+
+%help Your Query && Order && Cancellation
+
+@signin.email !EditText+no:'1'
+@signin.password !EditText+no:'2'
+@searchret.filter !a$c+no:'5'
+
+%register edt_signup_email && edt_first_name
+
+@checkout.addresses SHIPPING DETAILS
+@checkout.tax txtv_vat
+
+@menu.signin Login
+@register.back toolbar
+@account.addresses MY ADDRESS
+
+@addredit.addr_name Name
